@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  location: MyString
+  emergency_description: MyString
+  comments: MyString
+
+two:
+  location: MyString
+  emergency_description: MyString
+  comments: MyString

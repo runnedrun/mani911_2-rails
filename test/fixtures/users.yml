@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  age: 9.99
+  med_conditions: MyString
+  residence: MyString
+
+two:
+  name: MyString
+  age: 9.99
+  med_conditions: MyString
+  residence: MyString

@@ -1,0 +1,21 @@
+<h1>Listing pusheds</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pusheds.each do |pushed| %>
+  <tr>
+    <td><%= link_to 'Show', pushed %></td>
+    <td><%= link_to 'Edit', edit_pushed_path(pushed) %></td>
+    <td><%= link_to 'Destroy', pushed, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pushed', new_pushed_path %>

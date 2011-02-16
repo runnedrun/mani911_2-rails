@@ -1,0 +1,2 @@
+class Pushed < ActiveRecord::Base
+end
