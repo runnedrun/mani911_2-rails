@@ -1,6 +1,8 @@
 class CallsController < ApplicationController
   # GET /calls
   # GET /calls.xml
+  # include SMSfu
+
   def index
     @calls = Call.all
 
@@ -23,8 +25,30 @@ class CallsController < ApplicationController
 
   def wait_screen
     
+  end
+
+  def sms_test
+   
+    number = '2406032654'
+    carrier = 'sprint'
+    message = 'yo wassup'
+    UserMailer.deliver_registration_confirmation(number)
+    #deliver_sms(number, carrier, message)
+    render(:text => 'sms sent!')
+    return
+
+    
+  end
+
   # GET /calls/new
   # GET /calls/new.xml
+  def get_instructions
+    # send GET with params id => call id, recieve the instructions for that call
+    call = Call.find(params[:id])
+
+    return render :json => call.caller.pushed.instructions 
+  end
+
   def new
     @call = Call.new
 
@@ -60,7 +84,8 @@ class CallsController < ApplicationController
   def update
     @call = Call.find(params[:id])
 
-    respond_to do |format|
+    respond_to do |format|page.replace_html('cart', render(@cart))
+
       if @call.update_attributes(params[:call])
         format.html { redirect_to(@call, :notice => 'Call was successfully updated.') }
         format.xml  { head :ok }

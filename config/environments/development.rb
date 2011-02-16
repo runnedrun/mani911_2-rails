@@ -22,5 +22,22 @@ Mani9912::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  config.action_mailer.raise_delivery_errors = true
+
+  
+  config.action_mailer.delivery_method = :smtp
+  
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'runnedrun@gmail.com',
+    :user_name            => 'runnedrun@gmail.com',
+    :password             => 'password2',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  }
+  
+  
+
 end
 

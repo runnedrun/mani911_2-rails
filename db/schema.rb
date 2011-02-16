@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20110213210456) do
     t.string   "location"
     t.string   "emergency_description"
     t.string   "comments"
+    t.boolean  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20110213210456) do
   end
 
   create_table "instructions", :force => true do |t|
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"

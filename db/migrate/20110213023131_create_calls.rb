@@ -4,7 +4,7 @@ class CreateCalls < ActiveRecord::Migration
       t.string :location
       t.string :emergency_description
       t.string :comments
-
+      t.boolean :status
       t.timestamps
     end
   end

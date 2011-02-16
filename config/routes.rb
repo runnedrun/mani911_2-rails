@@ -1,4 +1,8 @@
-Mani9912::Application.routes.draw do
+Mani9912::Application.routes.draw do |map|
+  
+  map.connect ':controller/:action/:id'
+  
+  
   resources :instructions
 
   resources :contacts
@@ -13,8 +17,9 @@ Mani9912::Application.routes.draw do
 
   resources :calls
   
-  root :to "e
+  root :to => 'calls#wait_screen'
 
+   
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

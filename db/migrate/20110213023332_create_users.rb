@@ -7,6 +7,8 @@ class CreateUsers < ActiveRecord::Migration
       t.decimal :age
       t.string :med_conditions
       t.string :residence
+      t.string :number
+      t.string :carrier
 
       t.timestamps
     end

@@ -20,7 +20,8 @@ class InstructionsController < ApplicationController
       format.xml  { render :xml => @instruction }
     end
   end
-
+  
+  
   # GET /instructions/new
   # GET /instructions/new.xml
   def new

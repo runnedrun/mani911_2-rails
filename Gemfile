@@ -4,7 +4,8 @@ gem 'rails', '3.0.3'
 
 gem 'devise'
 gem 'omniauth'
-
+gem 'sms_fu'
+gem 'pony'	
 
 group :development, :test do
   gem 'paperclip'
@@ -14,5 +15,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'annotate'
   gem 'cucumber-rails'
+  gem 'sms_fu'
+  gem 'pony'
  
 end

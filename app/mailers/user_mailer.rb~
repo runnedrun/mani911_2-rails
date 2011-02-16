@@ -1,0 +1,9 @@
+class UserMailer < ActionMailer::Base
+  default :from => "from@example.com"
+
+  def registration_confirmation(number)
+    recipients  "#{number}@messaging.sprintpcs.com"
+    from        "yomama@example.com"
+    body        "hey! listen!"
+  end
+end
