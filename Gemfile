@@ -17,5 +17,6 @@ group :development, :test do
   gem 'cucumber-rails'
   gem 'sms_fu'
   gem 'pony'
+  gem 'ym4r'
  
 end

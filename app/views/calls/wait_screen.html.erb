@@ -1,1 +1,121 @@
-o hai
+<!DOCTYPE html>
+<html>
+<head>
+  <title>911.2</title>
+  <link type="text/css" media="all" rel="stylesheet" title="Default Style" href="style.css" />
+  
+  <script type="text/javascript" src="jquery-1.2.6.pack.js"></script>
+
+   <script>
+   function changeStyle()
+   {
+      document.getElementById('incoming_caller').id = 'incoming_caller_selected';
+      //function changeStyle(id, newClass){
+      //document.getElementById(id).className = newClass;
+   }
+    </script>
+</head>
+<body>
+
+<div id="left_screen">
+  <div id="content_holder">
+    
+    <h1>Incoming Calls</h1>
+    
+    <div id="callers_box"  >
+      <div id="incoming_caller" onClick="changeStyle();">
+        <div id="name">
+          Jialiya Huang
+        </div>
+        <div id="waiting_for" >
+              <span>Waiting Time: <script type="text/javascript" src="call-waiting3.js"></script></span>
+        </div>
+      </div>
+      <div id="incoming_caller" onClick="changeStyle();">
+        <div id="name">
+          Ollie Haas
+        </div>
+        <div id="waiting_for">
+              <span>Waiting Time: <script type="text/javascript" src="call-waiting3.js"></script></span>
+        </div>
+      </div>
+      <div id="incoming_caller">
+        <div id="name">
+          David Gaynor
+        </div>
+        <div id="waiting_for">
+              <span>Waiting Time: <script type="text/javascript" src="call-waiting3.js"></script></span>
+        </div>
+      </div>
+      <div id="incoming_caller">
+        <div id="name">
+          David Gaynor
+        </div>
+        <div id="waiting_for">
+              <span>Waiting Time: <script type="text/javascript" src="call-waiting3.js"></script></span>
+        </div>
+      </div>
+      <div id="incoming_caller">
+        <div id="name">
+          David Gaynor
+        </div>
+        <div id="waiting_for">
+              <span>Waiting Time: <script type="text/javascript" src="call-waiting3.js"></script></span>
+        </div>
+      </div>
+      <div id="incoming_caller">
+        <div id="name">
+          David Gaynor
+        </div>
+        <div id="waiting_for">
+              <span>Waiting Time: <script type="text/javascript" src="call-waiting3.js"></script></span>
+        </div>
+      </div>
+      <div id="incoming_caller">
+        <div id="name">
+          David Gaynor
+        </div>
+        <div id="waiting_for">
+              <span>Waiting Time: <script type="text/javascript" src="call-waiting3.js"></script></span>
+        </div>
+      </div>
+      <div id="incoming_caller">
+        <div id="name">
+          David Gaynor
+        </div>
+        <div id="waiting_for">
+              <span>Waiting Time: <script type="text/javascript" src="call-waiting3.js"></script></span>
+        </div>
+      </div>
+      <div id="incoming_caller">
+        <div id="name">
+          David Gaynor
+        </div>
+        <div id="waiting_for">
+              <span>Waiting Time: <script type="text/javascript" src="call-waiting3.js"></script></span>
+        </div>
+      </div>
+      <div id="incoming_caller">
+        <div id="name">
+          David Gaynor
+        </div>
+        <div id="waiting_for">
+              <span>Waiting Time: <script type="text/javascript" src="call-waiting3.js"></script></span>
+        </div>
+      </div>
+    </div>
+    <a href="emergency"><input type="submit" value="Answer Call" class="answer_call" /></a>
+  </div>
+</div>
+
+<div id="right_screen">
+  <div id="content_holder">
+    <h1>911 Dispatcher Dashboard</h1>
+    <input type="submit" value="Write New Instructions" class="local_dispatch" /><br /><br />
+    <input type="submit" value="Other Fancy Buttons" class="local_dispatch" /><br /><br />
+    <input type="submit" value="Settings" class="local_dispatch" /><br /><br />
+  </div>
+</div>
+
+</body>
+</html>

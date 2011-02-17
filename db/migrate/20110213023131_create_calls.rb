@@ -1,10 +1,11 @@
 class CreateCalls < ActiveRecord::Migration
   def self.up
     create_table :calls do |t|
-      t.string :location
+      t.string :latitude
+      t.string :longitude
       t.string :emergency_description
       t.string :comments
-      t.boolean :status
+      t.string :status
       t.timestamps
     end
   end

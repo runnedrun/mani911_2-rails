@@ -1,6 +1,6 @@
 Mani9912::Application.routes.draw do |map|
   
-  map.connect ':controller/:action/:id'
+  
   
   
   resources :instructions
@@ -18,8 +18,19 @@ Mani9912::Application.routes.draw do |map|
   resources :calls
   
   root :to => 'calls#wait_screen'
+  
 
+  map.connect 'sms_test', :controller => 'calls', :action => 'sms_test'
+
+  map.connect 'get_instructions/:id', :controller => 'calls' ,:action => 'get_instructions'
+  map.wait 'wait_screen', :controller => 'calls', :action => 'wait_screen'
    
+  map.emergency 'emergency', :controller => 'calls', :action => 'emergency'
+
+  map.info 'info_screen/:id', :controller => 'calls', :action => 'info_screen'
+  map.local_help 'local_help', :controller => 'calls', :action => 'local_help'
+  map.push_instructions 'push_instructions', :controller => 'calls', :action => 'push_instructions'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

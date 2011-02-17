@@ -2,7 +2,7 @@ class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table :users do |t|
       t.belongs_to :caller
-      t.belongs_to :heler
+      t.belongs_to :helper
       t.string :name
       t.decimal :age
       t.string :med_conditions

@@ -164,6 +164,7 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
+    ym4r (0.6.1)
 
 PLATFORMS
   ruby
@@ -181,3 +182,4 @@ DEPENDENCIES
   sms_fu
   sqlite3-ruby
   webrat
+  ym4r

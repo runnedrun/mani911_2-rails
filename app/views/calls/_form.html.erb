@@ -12,8 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
+    <%= f.label :latitude %><br />
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br />
+    <%= f.text_field :longitude %>
   </div>
   <div class="field">
     <%= f.label :emergency_description %><br />
@@ -23,7 +27,18 @@
     <%= f.label :comments %><br />
     <%= f.text_field :comments %>
   </div>
+   <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+   <div class="field">
+    <%= f.label :caller %><br />
+    <%= f.text_field :caller %>
+  </div>
+   
   <div class="actions">
     <%= f.submit %>
   </div>
+ 
+  
 <% end %>

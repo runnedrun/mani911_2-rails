@@ -1,8 +1,28 @@
+<html>
+<head>
+<title>Test</title>
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAOqcC-tT_CL-WjS8hBhrK7hSkVDnBE7ZXZz5sjj2mJGOka97njBR2elZPKKCpNufTDRoocUIvMzGw5Q" type="text/javascript"></script>
+
+<script type="text/javascript"> 
+function initialize() {
+var map = new GMap2(document.getElementById("map"));
+
+map.setCenter(new GLatLng(<%= @lat %>,<%= @lon %>),10);
+var point = new GLatLng(<%= @lat %>,<%= @lon %>);
+map.addOverlay(new GMarker(point),{title : "emergency location"});
+map.addControl(new GLargeMapControl());
+}
+
+ </script> 
+
+
+</head>
+<body onload="initialize()" onunload="GUnload()">
 <p id="notice"><%= notice %></p>
 
 <p>
   <b>Location:</b>
-  <%= @call.location %>
+  <%= @call.latitude %>  <%= @call.longitude %>
 </p>
 
 <p>
@@ -15,6 +35,11 @@
   <%= @call.comments %>
 </p>
 
+<div id="map" style="width:400px;height:300px" ></div>
+
+
 
 <%= link_to 'Edit', edit_call_path(@call) %> |
 <%= link_to 'Back', calls_path %>
+</body>
+</html>

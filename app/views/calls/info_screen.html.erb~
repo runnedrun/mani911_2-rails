@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>911.2</title>
+  <link type="text/css" media="all" rel="stylesheet" title="Default Style" href="stylevideomap.css" />
+  
+  
+</head>
+<body>
+
+<div id="left_screen">
+  <div id="content_holder">
+      <div id="video">
+        <img src="video.PNG" id="video">
+      </div>
+    
+       
+  </div>
+</div>
+
+<div id="right_screen">
+  <div id="content_holder">
+    <img src="map.PNG" id="map">
+  </div>
+</div>
+
+<div id="info_box">
+  <div id="search_box">
+    
+    <b>Search</b>
+    <table>
+    <tr>
+      <td>First name:</td>
+      <td><input type="text" name="fname" /></td>
+    </tr>
+    <tr>
+      <td>Last name:</td>
+      <td><input type="text" name="fname" /></td>
+    </tr><tr>
+      <td>Gender:</td>
+      <td><input type="text" name="fname" /></td>
+    </tr><tr>
+      <td>Height:</td>
+      <td><input type="text" name="fname" /></td>
+    </tr>
+    <tr>
+      <td>Hair Color:</td>
+      <td><input type="text" name="fname" /></td>
+    </tr>
+    <tr>
+      <td>Eye Color:</td>
+      <td><input type="text" name="fname" /></td>
+    </tr>
+    <tr>
+      <td>City:</td>
+      <td><input type="text" name="fname" /></td>
+    </tr>
+    <tr>
+      <td>Phone number:</td>
+      <td><input type="text" name="fname" /></td>
+    </tr>
+    </table>
+    <input type="submit" value="Submit" style="float:right;"/>
+</form>
+  </div>
+  <div id="content_holder">
+    <span id="left_box">
+      <img src="profile.jpg" height=160px>
+    </span>
+    <h2>Jialiya Huang</h2>
+    <h4>+1-428-334-2834</h4>
+    <h4>1000 Olin Way, Needham, MA 02492</h4>
+    <span>Call Duration: <script type="text/javascript" src="page-duration.js"></script></span>
+  </div>
+</div>
+
+</body>
+</html>

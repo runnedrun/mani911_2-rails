@@ -6,3 +6,15 @@ class PushedTest < ActiveSupport::TestCase
     assert true
   end
 end
+
+# == Schema Information
+#
+# Table name: pusheds
+#
+#  id         :integer         not null, primary key
+#  caller_id  :integer
+#  helper_id  :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+

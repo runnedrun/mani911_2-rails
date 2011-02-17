@@ -19,10 +19,11 @@ ActiveRecord::Schema.define(:version => 20110213210456) do
   end
 
   create_table "calls", :force => true do |t|
-    t.string   "location"
+    t.string   "latitude"
+    t.string   "longitude"
     t.string   "emergency_description"
     t.string   "comments"
-    t.boolean  "status"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -42,7 +43,9 @@ ActiveRecord::Schema.define(:version => 20110213210456) do
   end
 
   create_table "instructions", :force => true do |t|
+    t.integer  "pushed_id"
     t.string   "description"
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
@@ -59,11 +62,13 @@ ActiveRecord::Schema.define(:version => 20110213210456) do
 
   create_table "users", :force => true do |t|
     t.integer  "caller_id"
-    t.integer  "heler_id"
+    t.integer  "helper_id"
     t.string   "name"
     t.decimal  "age"
     t.string   "med_conditions"
     t.string   "residence"
+    t.string   "number"
+    t.string   "carrier"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -31,7 +31,7 @@ Mani9912::Application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => 'runnedrun@gmail.com',
+    :domain               => 'emergency_notification@boston.gov',
     :user_name            => 'runnedrun@gmail.com',
     :password             => 'password2',
     :authentication       => 'plain',

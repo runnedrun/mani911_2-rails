@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>911.2</title>
+  <link type="text/css" media="all" rel="stylesheet" title="Default Style" href="style.css" />
+  <script type="text/javascript">
+    function new_win() {
+    window.open('info_screen/<%= @id %>','caller information','location=no')
+    }
+    </script>
+</head>
+<body onload="new_win()">
+
+<div id="left_screen">
+  <div id="content_holder">
+    
+    <h1>Official</h1>
+    
+    <!--<h2>Emergency Description</h2>
+    <textarea rows="2" id="emergency_description">
+Keep it short!
+    </textarea>-->
+    
+    <h2>Emergency Description</h2>
+    <textarea rows="10" id="comments"></textarea>
+    
+    <h2>Request Dispatch</h2>
+    <form>
+    <input type="checkbox" name="Ambulance" value="True" /> Ambulance<br />
+    <input type="checkbox" name="Police" value="True" /> Police <br />
+    <input type="checkbox" name="Fire" value="True" /> Fire <br />
+    <br />
+    
+    <form name="input" action="html_form_action.asp" method="get">
+    <input type="submit" value="Submit" />
+    </form>
+    
+    </form>
+    
+    
+  </div>
+</div>
+
+<div id="right_screen">
+  <div id="content_holder">
+    <h1>Mobile</h1>
+    
+    <div id="call_for">
+    <%= button_to 'Call for Local Help', local_help_path(:id => @id),
+:remote => true, :class => "local_dispatch" %>
+    </div>
+    <span>
+    <h4>Max # of Responders Wanted:
+    <select>
+      <option>DEFAULT: 5</option>
+      <option>1</option>
+      <option>3</option>
+      <option>10</option>
+      <option>20</option>
+      <option>Unlimited</option>
+    </select>
+    <input type="submit" value="Update" />
+    </span>
+    <h2>Confirmed Local Responders</h2>
+    
+    
+    <div id="local_responders_holder">
+      <table id="local_responders">
+        <tr class="title">
+          <td id="name_column">Name</td>
+          <td>Current Location</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td id="name_column">Chris Gallello</td>
+          <td>123 Fake Street, 55505</td>
+          <td><input type="checkbox" name="Fire" value="True" /></td>
+        </tr>
+        <tr class="alt">
+          <td id="name_column">Ollie Haas</td>
+          <td>1 Madeup Road, 55505</td>
+          <td><input type="checkbox" name="Fire" value="True" /></td>
+        </tr>
+        <tr>
+          <td id="name_column">David Gaynor</td>
+          <td>5 Golden Ring Rd, 55505</td>
+          <td><input type="checkbox" name="Fire" value="True" /></td>
+        </tr>
+        <tr class="alt">
+          <td id="name_column">Jialiya Huang</td>
+          <td>9 Nonexistent Lane, 55505</td>
+          <td><input type="checkbox" name="Fire" value="True" /></td>
+        </tr>
+        <tr>
+          <td id="name_column">Ollie Haas</td>
+          <td>1 Madeup Road, 55505</td>
+          <td><input type="checkbox" name="Fire" value="True" /></td>
+        </tr>
+        <tr>
+          <td id="name_column">David Gaynor</td>
+          <td>5 Golden Ring Rd, 55505</td>
+          <td><input type="checkbox" name="Fire" value="True" /></td>
+        </tr>
+        <tr class="alt">
+          <td id="name_column">Jialiya Huang</td>
+          <td>9 Nonexistent Lane, 55505</td>
+          <td><input type="checkbox" name="Fire" value="True" /></td>
+        </tr>
+        <tr>
+          <td id="name_column">Ollie Haas</td>
+          <td>1 Madeup Road, 55505</td>
+          <td><input type="checkbox" name="Fire" value="True" /></td>
+        </tr>
+        <tr class="alt">
+          <td class="name_column">David Gaynor</td>
+          <td>5 Golden Ring Rd, 55505</td>
+          <td><input type="checkbox" name="Fire" value="True" /></td>
+        </tr>
+        <tr>
+          <td id="name_column">Jialiya Huang</td>
+          <td>9 Nonexistent Lane, 55505</td>
+          <td><input type="checkbox" name="Fire" value="True" /></td>
+        </tr>
+      </table>
+    </div>
+    
+    <!--<hr noshade style="width:90%;" align=left>-->
+    <span><h4>Push
+    <form method="POST" action="push_instructions" remote="true">
+    <select name="instruction">
+      <% for ins in @instructions %>
+      <option value=<%= ins.description %>><%= ins.title %></option>
+      <% end %>
+    </select>
+    instructions to selected
+    <input name="id" type="hidden" value=<%= @id %>>
+    <input type="submit" value="Submit" />
+    </form>
+    </span>
+    <span><h4>Request selected to
+    <select>
+      <option>leave scene immediately</option>
+      <option>find for more immediate help</option>
+      <option>send in video</option>
+      <option>send in pictures</option>
+      <option>stay silent</option>
+      <option>remain calm, help is on the way</option>
+    </select>
+    <input type="submit" value="Submit" />
+    </span>
+    <h2>Report Actions</h2>
+    <a href="finishpage.html"><input type="submit" value="End Call" class="end_call" /></a>
+    <input type="submit" value="Pass Call to Supervisor" class="resolved" />
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>911.2</title>
+    <%= stylesheet_link_tag "stylevideomap" %>
+  
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAOqcC-tT_CL-WjS8hBhrK7hSkVDnBE7ZXZz5sjj2mJGOka97njBR2elZPKKCpNufTDRoocUIvMzGw5Q" type="text/javascript"></script>
+
+<script type="text/javascript"> 
+function initialize() {
+var map = new GMap2(document.getElementById("map"));
+
+map.setCenter(new GLatLng(<%= @call.latitude %>,<%= @call.longitude %>),10);
+var point = new GLatLng(<%= @call.latitude %>,<%= @call.longitude %>);
+map.addOverlay(new GMarker(point),{title : "emergency location"});
+map.addControl(new GLargeMapControl());
+}
+
+ </script> 
+
+</head>
+<body onload="initialize()" onunload="GUnload()">
+
+<div id="left_screen">
+  <div id="content_holder">
+      <div id="video">
+        <img src="video.PNG" id="video">
+	<%= image_tag "video.PNG", :alt => 'caller ' %>
+      </div>
+    
+       
+  </div>
+</div>
+
+<div id="right_screen">
+  <div id="content_holder"> 
+    <div id="map" style="width:400px;height:300px" ></div>
+   </div>
+</div>
+
+<div id="info_box">
+  <div id="search_box">
+    
+    <b>information</b>
+    <table>
+    <tr>
+      <td>Name:</td>
+      <td><% @call.caller.user.name %></td>
+    </tr>
+    <tr>
+      <td>Age:</td>
+      <td><%= @call.caller.user.age %></td>
+    </tr>
+    <tr>
+      <td>Medical Conditions:</td>
+      <td><%= @call.caller.user.med_conditions %></td>
+    </tr>
+    <tr>
+      <td>Phone number:</td>
+      <td><%= @call.caller.user.number %></td>
+    </tr>
+    <tr>
+      <td>Residence:</td>
+      <td><%= @call.caller.user.residence %></td>
+    </tr>
+    
+    
+    </table>
+    <input type="submit" value="Submit" style="float:right;"/>
+</form>
+  </div>
+  <div id="content_holder">
+    <span id="left_box">
+      <img src="profile.jpg" height=160px>
+    </span>
+    <h2><%= @call.caller.user.name %></h2>
+    <h4><%= @call.caller.user.number %></h4>
+    
+    <span>Call Duration: <script type="text/javascript" src="page-duration.js"></script></span>
+  </div>
+</div>
+
+</body>
+</html>
