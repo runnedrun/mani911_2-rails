@@ -126,8 +126,8 @@ Keep it short!
     
     <!--<hr noshade style="width:90%;" align=left>-->
     <span><h4>Push
-    <form method="POST" action="push_instructions" remote="true">
-    <select name="instruction">
+  
+    <select name="instruction" id="ins">
       <% for ins in @instructions %>
       <option value=<%= ins.description %>><%= ins.title %></option>
       <% end %>
@@ -135,7 +135,7 @@ Keep it short!
     instructions to selected
     <input name="id" type="hidden" value=<%= @id %>>
     <input type="submit" value="Submit" />
-    </form>
+ 
     </span>
     <span><h4>Request selected to
     <select>

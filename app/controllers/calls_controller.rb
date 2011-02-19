@@ -38,12 +38,14 @@ class CallsController < ApplicationController
   def emergency
     call = Call.find(:first, :conditions => "status = 0")
     if not call
-      redirect_to(wait_path, :notice => 'no calls right now')
-      return
+       redirect_to(wait_path, :notice => 'no calls right now')
+       return
     end
     @id = call.id
     @instructions = Instruction.all
-    #call.status = 1
+    
+    # call.status = 1
+    # call.save
   end
   
   def push_instructions
@@ -61,6 +63,9 @@ class CallsController < ApplicationController
     @call = Call.find(params[:id])
   end
     
+  def finish
+    
+  end
   def local_help
     sms_fu = SMSFu::Client.configure(:delivery => :action_mailer)
     call = Call.find(params[:id])

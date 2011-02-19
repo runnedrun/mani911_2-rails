@@ -4,8 +4,7 @@ gem 'rails', '3.0.3'
 
 gem 'devise'
 gem 'omniauth'
-gem 'sms_fu'
-gem 'pony'	
+
 
 group :development, :test do
   gem 'paperclip'
@@ -18,5 +17,5 @@ group :development, :test do
   gem 'sms_fu'
   gem 'pony'
   gem 'ym4r'
- 
+	 
 end

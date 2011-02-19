@@ -31,6 +31,7 @@ Mani9912::Application.routes.draw do |map|
   map.local_help 'local_help', :controller => 'calls', :action => 'local_help'
   map.push_instructions 'push_instructions', :controller => 'calls', :action => 'push_instructions'
 
+  map.finish 'finish', :controller => 'calls', :action => 'finish'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
